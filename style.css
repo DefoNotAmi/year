@@ -67,16 +67,6 @@ body{
 
     transition:2s;
 
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#111;
-
 }
 
 .hero h1{
@@ -1513,5 +1503,10 @@ font-size:2.5rem;
 font-size:1rem;
 
 }
+
+}
+#changing-role{
+
+    min-height:80px;
 
 }
