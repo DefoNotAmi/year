@@ -198,7 +198,7 @@ document.getElementById("continueButton").addEventListener("click",()=>{
     caseFile.style.display="none";
 
     letterSection.style.display="flex";
-
+    const timeline=document.getElementById("timeline");
     window.scrollTo({
 
         top:0,
@@ -227,6 +227,32 @@ document.getElementById("continueButton").addEventListener("click",()=>{
 
     }
 
-    type();
+    type();function type(){
 
-});
+    if(i<letter.length){
+
+        target.innerHTML+=letter.charAt(i);
+
+        i++;
+
+        setTimeout(type,22);
+
+    }
+
+    else{
+
+        setTimeout(()=>{
+
+            timeline.style.display="block";
+
+            timeline.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        },1500);
+
+    }
+
+}
