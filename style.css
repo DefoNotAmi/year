@@ -664,3 +664,191 @@ top:15px;
 }
 
 }
+/*================ LOVE LETTER ================*/
+
+#loveLetter{
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:80px 20px;
+
+    background:
+
+    linear-gradient(to bottom,
+    #120909,
+    #0b0b0b);
+
+}
+
+/*================ LETTER ================*/
+
+.letter{
+
+    position:relative;
+
+    width:min(850px,95%);
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #f8f0dc,
+    #f0e2c2);
+
+    color:#34281c;
+
+    padding:70px;
+
+    border-radius:10px;
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.6);
+
+    animation:letterOpen 1s ease;
+
+}
+
+/*================ TITLE ================*/
+
+.letter h2{
+
+    text-align:center;
+
+    font-family:Cinzel;
+
+    font-size:2.8rem;
+
+    margin-bottom:40px;
+
+}
+
+/*================ TEXT ================*/
+
+#typedLetter{
+
+    white-space:pre-line;
+
+    font-size:1.15rem;
+
+    line-height:2.1;
+
+    font-family:Poppins;
+
+    min-height:500px;
+
+}
+
+/*================ SIGNATURE ================*/
+
+.signature{
+
+    margin-top:60px;
+
+    text-align:right;
+
+    font-size:1.4rem;
+
+    font-family:"Cinzel";
+
+}
+
+/*================ WAX SEAL ================*/
+
+.waxSeal{
+
+    position:absolute;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    #b30000,
+
+    #6b0000);
+
+    top:-30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    box-shadow:
+
+    0 0 20px rgba(0,0,0,.4);
+
+}
+
+/*================ ANIMATION ================*/
+
+@keyframes letterOpen{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(80px)
+
+scale(.92);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+}
+
+/*================ MOBILE ================*/
+
+@media(max-width:700px){
+
+.letter{
+
+padding:35px;
+
+}
+
+.letter h2{
+
+font-size:2rem;
+
+}
+
+#typedLetter{
+
+font-size:1rem;
+
+line-height:1.8;
+
+}
+
+.signature{
+
+font-size:1.2rem;
+
+}
+
+}
