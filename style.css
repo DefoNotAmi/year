@@ -1106,3 +1106,181 @@ font-size:2.8rem;
 }
 
 }
+/*================ EVIDENCE ================*/
+
+#evidence{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:120px 20px;
+
+    background:
+    radial-gradient(circle,#170909,#0b0b0b);
+
+}
+
+.evidenceTitle{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.evidenceTitle p{
+
+    color:#b08a54;
+
+    letter-spacing:6px;
+
+    font-family:Poppins;
+
+    text-transform:uppercase;
+
+}
+
+.evidenceTitle h1{
+
+    font-family:Cinzel;
+
+    font-size:4rem;
+
+    margin-top:15px;
+
+}
+
+.evidenceGrid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:40px;
+
+}
+
+/*================ CARD =================*/
+
+.evidenceCard{
+
+    position:relative;
+
+    height:330px;
+
+    transform-style:preserve-3d;
+
+    transition:1s;
+
+    cursor:pointer;
+
+}
+
+.evidenceCard.flipped{
+
+    transform:rotateY(180deg);
+
+}
+
+.cardFront,
+.cardBack{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:18px;
+
+    backface-visibility:hidden;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.45);
+
+}
+
+.cardFront{
+
+    background:
+
+    linear-gradient(145deg,
+    #2b0d0d,
+    #471414);
+
+    color:white;
+
+}
+
+.cardBack{
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #f6e8c8,
+    #ead6ab);
+
+    color:#2b241c;
+
+    transform:rotateY(180deg);
+
+}
+
+.cardFront span{
+
+    color:#d1aa62;
+
+    font-family:Poppins;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+.cardFront h2,
+.cardBack h2{
+
+    font-family:Cinzel;
+
+    margin-bottom:20px;
+
+}
+
+.cardFront p,
+.cardBack p{
+
+    font-family:Poppins;
+
+    line-height:1.8;
+
+}
+
+.evidenceCard:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.evidenceCard.flipped:hover{
+
+    transform:rotateY(180deg) translateY(-10px);
+
+}
