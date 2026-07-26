@@ -1,0 +1,97 @@
+const roles = [
+
+    {
+        text:"A Stranger",
+        color:"#8E8E8E"
+    },
+
+    {
+        text:"A Classmate",
+        color:"#5DADE2"
+    },
+
+    {
+        text:"A Childhood Love",
+        color:"#FF9FF3"
+    },
+
+    {
+        text:"My Best Friend",
+        color:"#58D68D"
+    },
+
+    {
+        text:"My Partner",
+        color:"#F5B041"
+    },
+
+    {
+        text:"My Safe Place",
+        color:"#C39BD3"
+    },
+
+    {
+        text:"The Love of my Life",
+        color:"#FFD700"
+    }
+
+];
+
+const role = document.getElementById("changing-role");
+
+let i = 0;
+
+function showRole(){
+
+    role.style.opacity = 0;
+
+    setTimeout(()=>{
+
+        role.innerText = roles[i].text;
+
+        role.style.color = roles[i].color;
+
+        role.style.opacity = 1;
+
+        i++;
+
+        if(i < roles.length){
+
+            setTimeout(showRole,1200);
+
+        }
+
+        else{
+
+            setTimeout(finishIntro,1800);
+
+        }
+
+    },300);
+
+}
+
+showRole();
+
+function finishIntro(){
+
+    document.getElementById("intro").style.opacity = "0";
+
+    setTimeout(()=>{
+
+        document.getElementById("intro").style.display = "none";
+
+    },2000);
+
+    setTimeout(()=>{
+
+        document.body.style.overflow = "auto";
+
+        document.body.style.background = "#111";
+
+        document.getElementById("website").style.opacity = "1";
+        document.getElementById("website").style.pointerEvents = "all";
+
+    },7000);
+
+}
