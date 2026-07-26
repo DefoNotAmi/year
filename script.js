@@ -250,9 +250,24 @@ document.getElementById("continueButton").addEventListener("click",()=>{
                 behavior:"smooth"
 
             });
-
-        },1500);
+            
+            setTimeout(()=>{
+    
+                evidence.style.display="block";
+    
+            },2500);
 
     }
 
 }
+const evidence=document.getElementById("evidence");
+
+document.querySelectorAll(".evidenceCard").forEach(card=>{
+
+    card.addEventListener("click",()=>{
+
+        card.classList.toggle("flipped");
+
+    });
+
+});
