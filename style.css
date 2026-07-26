@@ -435,3 +435,232 @@ width:100%;
 }
 
 }
+/*================ CASE FILE ================*/
+
+#caseFile{
+
+    display:none;
+
+    min-height:100vh;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 20px;
+
+    background:
+
+    radial-gradient(circle,#2b0909,#120909,#050505);
+
+}
+
+/*================ PAPER ================*/
+
+.paper{
+
+    position:relative;
+
+    width:min(900px,95%);
+
+    padding:70px;
+
+    border-radius:12px;
+
+    background:
+
+    linear-gradient(135deg,#f5ebd7,#efe2c4,#e7d4ab);
+
+    color:#2d2418;
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.65),
+
+    inset 0 0 80px rgba(120,80,40,.18);
+
+    overflow:hidden;
+
+    animation:paperAppear 1.2s ease;
+
+}
+
+/* texture */
+
+.paper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    repeating-linear-gradient(
+
+        45deg,
+
+        rgba(255,255,255,.03),
+
+        rgba(255,255,255,.03) 2px,
+
+        transparent 2px,
+
+        transparent 4px
+
+    );
+
+    opacity:.25;
+
+}
+
+/*================ STAMP ================*/
+
+.stamp{
+
+    position:absolute;
+
+    right:35px;
+
+    top:30px;
+
+    transform:rotate(15deg);
+
+    border:4px solid darkred;
+
+    color:darkred;
+
+    padding:12px 20px;
+
+    border-radius:50%;
+
+    font-family:Poppins;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    opacity:.7;
+
+}
+
+/*================ TITLES ================*/
+
+.paper h2{
+
+    letter-spacing:8px;
+
+    color:#765437;
+
+    font-size:.9rem;
+
+    font-family:Poppins;
+
+}
+
+.paper h1{
+
+    margin-top:15px;
+
+    font-size:3.5rem;
+
+    font-family:Cinzel;
+
+}
+
+.divider{
+
+    width:140px;
+
+    height:3px;
+
+    background:#7f0000;
+
+    margin:25px 0 40px;
+
+}
+
+.roleText{
+
+    font-size:1.15rem;
+
+    line-height:2.1;
+
+    font-family:Poppins;
+
+}
+
+/*================ BUTTON ================*/
+
+#continueButton{
+
+    margin-top:60px;
+
+}
+
+/*================ ANIMATION ================*/
+
+@keyframes paperAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        scale(.9)
+
+        translateY(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        scale(1)
+
+        translateY(0);
+
+    }
+
+}
+
+/*================ MOBILE ================*/
+
+@media(max-width:700px){
+
+.paper{
+
+padding:35px;
+
+}
+
+.paper h1{
+
+font-size:2.2rem;
+
+}
+
+.roleText{
+
+font-size:1rem;
+
+line-height:1.8;
+
+}
+
+.stamp{
+
+font-size:.7rem;
+
+right:15px;
+
+top:15px;
+
+}
+
+}
