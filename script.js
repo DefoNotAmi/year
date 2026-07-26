@@ -271,3 +271,70 @@ document.querySelectorAll(".evidenceCard").forEach(card=>{
     });
 
 });
+const finalScene=document.getElementById("finalScene");
+
+function showFinalScene(){
+
+    document.body.style.background="black";
+
+    document.querySelectorAll("section").forEach(section=>{
+
+        if(section.id!="finalScene"){
+
+            section.style.transition="1.5s";
+            section.style.opacity="0";
+
+        }
+
+    });
+
+    setTimeout(()=>{
+
+        document.querySelectorAll("section").forEach(section=>{
+
+            if(section.id!="finalScene"){
+
+                section.style.display="none";
+
+            }
+
+        });
+
+        finalScene.style.display="flex";
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    },1500);
+
+}
+        const evidenceCards=document.querySelectorAll(".evidenceCard");
+
+let openedCards=0;
+
+evidenceCards.forEach(card=>{
+
+    card.addEventListener("click",()=>{
+
+        if(!card.classList.contains("done")){
+
+            card.classList.add("done");
+
+            openedCards++;
+
+        }
+
+        if(openedCards===evidenceCards.length){
+
+            setTimeout(showFinalScene,2500);
+
+        }
+
+    });
+
+});
