@@ -139,3 +139,94 @@ document.getElementById("beginButton").addEventListener("click",()=>{
     },900);
 
 });
+const letterSection=document.getElementById("loveLetter");
+
+const letter=`My dearest love,
+
+One whole year.
+
+Three hundred and sixty-five days of loving you.
+
+Three hundred and sixty-five days of laughing with you, missing you, dreaming about our future and finding comfort in your voice.
+
+If someone had told me a year ago that one person could become my favorite place in the world...
+
+I probably wouldn't have believed them.
+
+But then I met you.
+
+You became the first person I want to tell everything to.
+
+The first person I think about when I wake up.
+
+The last person I think about before falling asleep.
+
+You have given me memories I'll treasure forever.
+
+Even on difficult days...
+
+Even when distance feels unfair...
+
+Even when life gets complicated...
+
+I still choose you.
+
+Again.
+
+And again.
+
+And again.
+
+Thank you for loving me.
+
+Thank you for staying.
+
+Thank you for making my world brighter than it has ever been.
+
+One year has already passed...
+
+Yet somehow,
+
+I feel like we're only reading the very first chapter of our story.
+
+Happy one year, my love.
+
+Here's to countless more adventures together. ❤️`;
+
+document.getElementById("continueButton").addEventListener("click",()=>{
+
+    caseFile.style.display="none";
+
+    letterSection.style.display="flex";
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+    const target=document.getElementById("typedLetter");
+
+    target.innerHTML="";
+
+    let i=0;
+
+    function type(){
+
+        if(i<letter.length){
+
+            target.innerHTML+=letter.charAt(i);
+
+            i++;
+
+            setTimeout(type,22);
+
+        }
+
+    }
+
+    type();
+
+});
