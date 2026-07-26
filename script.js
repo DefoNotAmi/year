@@ -95,3 +95,22 @@ function finishIntro(){
     },7000);
 
 }
+const particles = document.querySelector(".floating-particles");
+
+for(let i=0;i<70;i++){
+
+    const p=document.createElement("span");
+
+    p.style.left=Math.random()*100+"%";
+
+    p.style.animationDuration=8+Math.random()*12+"s";
+
+    p.style.animationDelay=Math.random()*10+"s";
+
+    p.style.opacity=Math.random();
+
+    p.style.transform=`scale(${Math.random()*2})`;
+
+    particles.appendChild(p);
+
+}
