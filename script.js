@@ -240,19 +240,37 @@ document.getElementById("continueButton").addEventListener("click",()=>{
 
     function type(){
 
-        if(i<letter.length){
+    if(i < letter.length){
 
-            target.innerHTML+=letter.charAt(i);
+        target.innerHTML += letter.charAt(i);
 
-            i++;
+        i++;
 
-            setTimeout(type,22);
-
-        }
+        setTimeout(type,22);
 
     }
 
-    type();function type(){
+    else{
+
+        setTimeout(()=>{
+
+            timeline.style.display="block";
+
+            timeline.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        },1500);
+
+    }
+
+}
+
+
+type();
+    function type(){
 
     if(i<letter.length){
 
