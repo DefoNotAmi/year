@@ -114,3 +114,28 @@ for(let i=0;i<70;i++){
     particles.appendChild(p);
 
 }
+const hero=document.querySelector(".hero");
+const caseFile=document.getElementById("caseFile");
+
+document.getElementById("beginButton").addEventListener("click",()=>{
+
+    hero.style.opacity="0";
+    hero.style.pointerEvents="none";
+
+    setTimeout(()=>{
+
+        hero.style.display="none";
+
+        caseFile.style.display="flex";
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    },900);
+
+});
