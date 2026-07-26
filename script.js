@@ -31,70 +31,95 @@ const roles = [
     },
 
     {
-        text:"The Love of my Life",
+        text:"The Love of My Life",
         color:"#FFD700"
     }
 
 ];
 
-const role = document.getElementById("changing-role");
 
-let i = 0;
+const roleText = document.getElementById("changing-role");
 
-function showRole(){
+const intro = document.getElementById("intro");
 
-    role.style.opacity = 0;
+const website = document.getElementById("website");
+
+
+let index = 0;
+
+
+function changeRole(){
+
+    roleText.style.opacity = 0;
+
 
     setTimeout(()=>{
 
-        role.innerText = roles[i].text;
 
-        role.style.color = roles[i].color;
+        roleText.innerHTML = roles[index].text;
 
-        role.style.opacity = 1;
+        roleText.style.color = roles[index].color;
 
-        i++;
+        roleText.style.opacity = 1;
 
-        if(i < roles.length){
 
-            setTimeout(showRole,1200);
+        index++;
+
+
+        if(index < roles.length){
+
+            setTimeout(changeRole,1200);
 
         }
 
         else{
 
-            setTimeout(finishIntro,1800);
+            setTimeout(endIntro,2000);
 
         }
 
+
     },300);
+
 
 }
 
-showRole();
 
-function finishIntro(){
 
-    document.getElementById("intro").style.opacity = "0";
+function endIntro(){
+
+
+    // disparition du texte
+
+    intro.style.opacity="0";
+
 
     setTimeout(()=>{
 
-        document.getElementById("intro").style.display = "none";
+
+        intro.style.display="none";
+
+
+        website.style.opacity="1";
+
+        website.style.pointerEvents="all";
+
+
+        document.body.style.overflow="auto";
+
 
     },2000);
 
-    setTimeout(()=>{
-
-        document.body.style.overflow = "auto";
-
-        document.body.style.background = "#111";
-
-        document.getElementById("website").style.opacity = "1";
-        document.getElementById("website").style.pointerEvents = "all";
-
-    },7000);
 
 }
+
+
+
+window.addEventListener("load",()=>{
+
+    changeRole();
+
+});
 const particles = document.querySelector(".floating-particles");
 
 for(let i=0;i<70;i++){
